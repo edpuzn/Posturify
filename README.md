@@ -1,62 +1,64 @@
 
 # Posturify
 
-![Flutter](https://img.shields.io/badge/Flutter-3.13+-02569B?style=flat&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?style=flat&logo=dart&logoColor=white)
-![ML Kit](https://img.shields.io/badge/Google_ML_Kit-Vision-FF6F00?style=flat&logo=google&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-3.13+-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![ML Kit](https://img.shields.io/badge/Google_ML_Kit-Vision-FF6F00?style=for-the-badge&logo=google&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-iOS_%7C_Android-9cf?style=for-the-badge)
 
 ---
 
-## 🇬🇧 English
+## � English
 
-**Posturify** is an AI-powered fitness assistant designed to analyze your exercise form in real-time. By leveraging computer vision on your mobile device, it detects your posture and provides instant voice feedback to ensure you are training correctly and safely.
+**Posturify** transforms your smartphone into an elite personal trainer. Leveraging cutting-edge computer vision, it audits your workout form in real-time, delivering instant corrective feedback to ensure every rep counts.
 
-### Why Use Posturify?
+### 💎 Why Posturify?
 
-*   **Prevent Injuries:** Incorrect form is a leading cause of workout-related injuries. Posturify acts as a real-time spotter, warning you the moment your posture deviates from the safe range (e.g., "Keep your back straight").
-*   **Maximize Efficiency:** Quality over quantity. The app's smart counter only registers repetitions that are performed with correct form, ensuring you get the full benefit of every movement.
-*   **Train Anywhere:** No need for expensive equipment or personal trainers. Your phone's camera is all you need to get professional-grade form analysis at home or all the gym.
+*   **🛡️ Injury Shield:** Bad form is the silent killer of progress. Posturify acts as your digital guardian, catching misalignments milliseconds before they become potential injuries.
+*   **⚡ Zero Wasted Effort:** Quality beats quantity. Our smart engine ignores sloppy reps, forcing you to maintain perfect technique for every single count.
+*   **🎒 Gym in Your Pocket:** Ditch the bulky equipment. Whether you're in a hotel room or a garage, your phone is now a world-class biomechanics lab.
 
-### Screenshots
+### 📸 Visual Tour
 
-| **Home** | **Selection** | **Live Analysis** |
+| **Hub** | **Arsenal** | **Action** |
 |:---:|:---:|:---:|
 | <img src="screenshots/home.png" width="250"> | <img src="screenshots/selection.png" width="250"> | <img src="screenshots/action_demo.png" width="250"> |
+| *Your Command Center* | *Select Your Challenge* | *Real-time Corrections* |
 
-| **Statistics** | **Profile** |
+| **Evolution** | **Identity** |
 |:---:|:---:|
 | <img src="screenshots/history.png" width="250"> | <img src="screenshots/profile.png" width="250"> |
+| *Track Your Growth* | *Level Up Your Avatar* |
 
-### Key Features
+### 🔥 Core Capabilities
 
-*   **AI Form Analysis:** Uses Google ML Kit Pose Detection to track 33 body landmarks at 30fps.
-*   **Voice Assistant:** Provides immediate TTS (Text-to-Speech) feedback for corrective actions.
-*   **Smart Counting:** Repetitions are counted logic-based, filtering out incomplete or bad reps.
-*   **Gamification:** Earn XP, level up, and unlock badges to stay motivated.
-*   **Privacy Focused:** All video processing happens on-device. No video data is ever sent to the cloud.
+*   **👁️‍🗨️ Biometric Vision:** Tracks 33 anatomical landmarks at 30 frames per second using Google ML Kit.
+*   **🎧 Sonic Feedback:** No need to look at the screen. The app speaks to you: "Lower your hips," "Straighten your back."
+*   **🎯 Precision Counting:** Only valid reps trigger the counter. Cheating is impossible.
+*   **⚔️ Gamified Grind:** Earn XP, shatter records, and unlock prestigious badges as you improve.
+*   **🔒 Ironclad Privacy:** 100% on-device processing. Your video feed never leaves your phone.
 
-### Tech Stack
+### 🧪 Under the Hood
 
-*   **Framework:** Flutter & Dart
-*   **AI/ML:** `google_mlkit_pose_detection`
-*   **Storage:** `hive` (NoSQL local database)
-*   **State Management:** `ValueNotifier` & Services
-*   **Navigation:** `auto_route`
+*   **Engine:** Flutter & Dart
+*   **Brain:** `google_mlkit_pose_detection`
+*   **Vault:** `hive` (Ultra-fast local NoSQL)
+*   **Flow:** `auto_route`
 
-### Installation
+### 🔌 Quick Start
 
-1.  **Clone the repo:**
+1.  **Clone:**
     ```bash
     git clone https://github.com/edpuzn/Posturify.git
     cd Posturify
     ```
 
-2.  **Install dependencies:**
+2.  **Hydrate:**
     ```bash
     flutter pub get
     ```
 
-3.  **Run (iOS/Android):**
+3.  **Ignite:**
     ```bash
     flutter run --release
     ```
@@ -65,43 +67,43 @@
 
 ## 🇹🇷 Türkçe
 
-**Posturify**, egzersiz formunuzu gerçek zamanlı olarak analiz eden akıllı bir fitness asistanıdır. Telefonunuzun kamerasını ve görüntü işleme teknolojilerini kullanarak duruşunuzu takip eder, antrenman sırasında sesli geri bildirimlerle hareketleri doğru ve güvenli yapmanızı sağlar.
+**Posturify**, akıllı telefonunuzu elit bir kişisel antrenöre dönüştürür. Gelişmiş bilgisayarlı görü teknolojisi ile egzersiz formunuzu saniye saniye denetler ve her tekrarın mükemmel olması için size anlık sesli komutlar verir.
 
-### Neden Posturify?
+### 💎 Neden Posturify?
 
-*   **Sakatlanmaları Önleyin:** Spor sakatlanmalarının en büyük sebebi yanlış formdur. Posturify, duruşunuz bozulduğu anda (örneğin "Sırtını dik tut") sizi uyararak sanal bir antrenör gibi çalışır.
-*   **Verimliliği Artırın:** Sadece doğru formda yapılan tekrarlar sayılır. Bu sayede antrenmanınızdan maksimum verim alırsınız; yarım veya hatalı hareketler skora yansımaz.
-*   **Her Yerde Antrenman:** Pahalı ekipmanlara veya spor salonuna ihtiyaç duymadan, sadece telefonunuzla profesyonel form analizi alabilirsiniz.
+*   **🛡️ Sakatlık Kalkanı:** Yanlış form, gelişimi durdurur ve sakatlığa yol açar. Posturify, duruşunuz bozulduğu an devreye girer ve sizi korur.
+*   **⚡ Sıfır Kayıp:** Nicelik değil, nitelik önemlidir. Akıllı motorumuz, baştan savma hareketleri görmezden gelir; sizi her tekrarda mükemmelliğe zorlar.
+*   **🎒 Cepteki Spor Salonu:** Pahalı ekipmanlara gerek yok. Odanızda, parkta veya ofiste; telefonunuz artık profesyonel bir biyomekanik laboratuvarı.
 
-### Temel Özellikler
+### 🔥 Temel Yetenekler
 
-*   **Yapay Zeka Analizi:** Vücut eklem noktalarınızı saniyede 30 kare hızında takip eder ve analiz eder.
-*   **Sesli Asistan:** Hatalı duruşlarda anlık sesli uyarı vererek duruşunuzu düzeltmenize yardımcı olur.
-*   **Akıllı Sayaç:** Sadece nizami tekrarları sayar.
-*   **Oyunlaştırma:** Egzersiz yaptıkça XP kazanır ve seviye atlarsınız.
-*   **Gizlilik:** Tüm görüntü işleme cihaz üzerinde (on-device) yapılır, hiçbir görüntü sunucuya gönderilmez.
+*   **👁️‍🗨️ Biyometrik Görüş:** Vücudunuzdaki 33 kritik noktayı Google ML Kit ile saniyede 30 kez tarar.
+*   **🎧 Sesli Koç:** Ekrana bakmanıza gerek yok. Uygulama sizinle konuşur: "Kalçanı düşür", "Sırtını dik tut".
+*   **🎯 Hassas Sayaç:** Hile yapmak imkansız. Sadece nizami formda yapılan hareketler skora işlenir.
+*   **⚔️ Oyunlaştırma:** Antrenman yaptıkça XP kazanın, rekorları kırın ve rütbenizi yükseltin.
+*   **🔒 Tam Gizlilik:** Tüm işlemler cihazınızda (on-device) yapılır. Görüntünüz asla internete yüklenmez.
 
-### Teknik Altyapı
+### 🧪 Teknik Altyapı
 
-*   **Framework:** Flutter & Dart
-*   **Yapay Zeka:** Google ML Kit
-*   **Veritabanı:** Hive (Yerel depolama)
-*   **Durum Yönetimi:** ValueNotifier
+*   **Motor:** Flutter & Dart
+*   **Beyin:** Google ML Kit
+*   **Kasa:** Hive (Yerel Veritabanı)
+*   **Akış:** Auto Route
 
-### Kurulum
+### 🔌 Kurulum
 
-1.  **Projeyi indirin:**
+1.  **İndir:**
     ```bash
     git clone https://github.com/edpuzn/Posturify.git
     cd Posturify
     ```
 
-2.  **Paketleri yükleyin:**
+2.  **Hazırla:**
     ```bash
     flutter pub get
     ```
 
-3.  **Çalıştırın:**
+3.  **Ateşle:**
     ```bash
     flutter run --release
     ```
