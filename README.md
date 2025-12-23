@@ -1,101 +1,107 @@
 
-# Posturify - AI Powered Fitness Assistant 🏋️‍♂️
+# Posturify
 
-![Flutter](https://img.shields.io/badge/Flutter-3.13+-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![ML Kit](https://img.shields.io/badge/Google_ML_Kit-Vision-FF6F00?style=for-the-badge&logo=google&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-iOS_%7C_Android-9cf?style=for-the-badge)
-
-**Posturify**, egzersiz formunuzu gerçek zamanlı olarak analiz eden, yapay zeka destekli akıllı bir fitness asistanıdır. Gelişmiş görüntü işleme teknolojileri kullanarak, antrenman sırasında duruşunuzu düzeltir ve sesli geri bildirimlerle sizi motive eder.
+![Flutter](https://img.shields.io/badge/Flutter-3.13+-02569B?style=flat&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?style=flat&logo=dart&logoColor=white)
+![ML Kit](https://img.shields.io/badge/Google_ML_Kit-Vision-FF6F00?style=flat&logo=google&logoColor=white)
 
 ---
 
-## 📱 Ekran Görüntüleri
+## 🇬🇧 English
 
-| **Ana Sayfa** | **Egzersiz Seçimi** | **Canlı Analiz** |
+**Posturify** is an AI-powered fitness assistant designed to analyze your exercise form in real-time. By leveraging computer vision on your mobile device, it detects your posture and provides instant voice feedback to ensure you are training correctly and safely.
+
+### Why Use Posturify?
+
+*   **Prevent Injuries:** Incorrect form is a leading cause of workout-related injuries. Posturify acts as a real-time spotter, warning you the moment your posture deviates from the safe range (e.g., "Keep your back straight").
+*   **Maximize Efficiency:** Quality over quantity. The app's smart counter only registers repetitions that are performed with correct form, ensuring you get the full benefit of every movement.
+*   **Train Anywhere:** No need for expensive equipment or personal trainers. Your phone's camera is all you need to get professional-grade form analysis at home or all the gym.
+
+### Screenshots
+
+| **Home** | **Selection** | **Live Analysis** |
 |:---:|:---:|:---:|
 | <img src="screenshots/home.png" width="250"> | <img src="screenshots/selection.png" width="250"> | <img src="screenshots/action_demo.png" width="250"> |
-| *Kişiselleştirilmiş akış* | *Geniş hareket kütüphanesi* | *Gerçek zamanlı form analizi* |
 
-| **Detaylı İstatistikler** | **Gelişmiş Profil** |
+| **Statistics** | **Profile** |
 |:---:|:---:|
 | <img src="screenshots/history.png" width="250"> | <img src="screenshots/profile.png" width="250"> |
-| *Haftalık gelişim takibi* | *BMI ve seviye durumu* |
 
----
+### Key Features
 
-## ✨ Temel Özellikler
+*   **AI Form Analysis:** Uses Google ML Kit Pose Detection to track 33 body landmarks at 30fps.
+*   **Voice Assistant:** Provides immediate TTS (Text-to-Speech) feedback for corrective actions.
+*   **Smart Counting:** Repetitions are counted logic-based, filtering out incomplete or bad reps.
+*   **Gamification:** Earn XP, level up, and unlock badges to stay motivated.
+*   **Privacy Focused:** All video processing happens on-device. No video data is ever sent to the cloud.
 
-*   **🤖 AI Destekli Form Analizi:** Google ML Kit Pose Detection ile vücut noktalarınızı saniyede 30 kare hızında takip eder.
-*   **🗣️ Sesli Asistan (TTS):** Hatalı duruşlarda ("Sırtını düz tut", "Daha aşağı in") anlık sesli uyarı verir.
-*   **📊 Akıllı Sayaç:** Sadece doğru formda yapılan tekrarları sayar. Yarım veya hatalı hareketler sayılmaz.
-*   **🏆 Oyunlaştırma (Gamification):** Egzersiz yaptıkça XP kazanın, seviye atlayın ve rozetlerin kilidini açın.
-*   **📈 Gelişim Takibi:** Hive veritabanı ile tüm antrenman geçmişiniz, rekorlarınız ve vücut kitle indeksiniz (BMI) cihazınızda güvenle saklanır.
-*   **🌓 Dinamik Tema:** Otomatik karanlık/aydınlık mod desteği.
-
----
-
-## 🛠️ Teknik Altyapı
-
-Bu proje, modern Flutter mimarisi ve best-practice'ler kullanılarak geliştirilmiştir.
+### Tech Stack
 
 *   **Framework:** Flutter & Dart
-*   **Yapay Zeka (AI):** `google_mlkit_pose_detection` (Base model ile optimize edilmiş performans)
-*   **State Management:** `ValueNotifier` & Singleton Services (Hafif ve hızlı)
-*   **Veritabanı:** `hive` (NoSQL, ultra hızlı yerel depolama)
-*   **Navigasyon:** `auto_route` (Tip güvenli yönlendirme)
-*   **Medya:** `camera` (Görüntü akışı), `flutter_tts` (Metin okuma)
+*   **AI/ML:** `google_mlkit_pose_detection`
+*   **Storage:** `hive` (NoSQL local database)
+*   **State Management:** `ValueNotifier` & Services
+*   **Navigation:** `auto_route`
 
----
+### Installation
 
-## 🚀 Kurulum ve Çalıştırma
-
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
-
-### Gereksinimler
-*   Flutter SDK (3.0+)
-*   Xcode (iOS için) veya Android Studio
-*   CocoaPods (iOS bağımlılıkları için)
-
-### Adımlar
-
-1.  **Depoyu Klonlayın:**
+1.  **Clone the repo:**
     ```bash
-    git clone https://github.com/username/posturify.git
-    cd posturify
+    git clone https://github.com/edpuzn/Posturify.git
+    cd Posturify
     ```
 
-2.  **Bağımlılıkları Yükleyin:**
+2.  **Install dependencies:**
     ```bash
     flutter pub get
     ```
 
-3.  **iOS Kurulumu (Mac Kullanıcıları):**
+3.  **Run (iOS/Android):**
     ```bash
-    cd ios
-    pod install --repo-update
-    cd ..
+    flutter run --release
     ```
-    *Not: Xcode'da Signing & Capabilities sekmesinden kendi Team ID'nizi seçmeyi unutmayın.*
-
-4.  **Uygulamayı Çalıştırın:**
-    *   **Debug Mod:**
-        ```bash
-        flutter run
-        ```
-    *   **Release Mod (Önerilen - Daha Hızlı):**
-        ```bash
-        flutter run --release
-        ```
 
 ---
 
-## 🤝 Katkıda Bulunma
+## 🇹🇷 Türkçe
 
-Hataları bildirmek veya yeni özellikler önermek için lütfen [Issues](issues) sayfasını kullanın. Pull Request'ler memnuniyetle karşılanır!
+**Posturify**, egzersiz formunuzu gerçek zamanlı olarak analiz eden akıllı bir fitness asistanıdır. Telefonunuzun kamerasını ve görüntü işleme teknolojilerini kullanarak duruşunuzu takip eder, antrenman sırasında sesli geri bildirimlerle hareketleri doğru ve güvenli yapmanızı sağlar.
 
----
+### Neden Posturify?
 
-## 📄 Lisans
+*   **Sakatlanmaları Önleyin:** Spor sakatlanmalarının en büyük sebebi yanlış formdur. Posturify, duruşunuz bozulduğu anda (örneğin "Sırtını dik tut") sizi uyararak sanal bir antrenör gibi çalışır.
+*   **Verimliliği Artırın:** Sadece doğru formda yapılan tekrarlar sayılır. Bu sayede antrenmanınızdan maksimum verim alırsınız; yarım veya hatalı hareketler skora yansımaz.
+*   **Her Yerde Antrenman:** Pahalı ekipmanlara veya spor salonuna ihtiyaç duymadan, sadece telefonunuzla profesyonel form analizi alabilirsiniz.
 
-Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakınız.
+### Temel Özellikler
+
+*   **Yapay Zeka Analizi:** Vücut eklem noktalarınızı saniyede 30 kare hızında takip eder ve analiz eder.
+*   **Sesli Asistan:** Hatalı duruşlarda anlık sesli uyarı vererek duruşunuzu düzeltmenize yardımcı olur.
+*   **Akıllı Sayaç:** Sadece nizami tekrarları sayar.
+*   **Oyunlaştırma:** Egzersiz yaptıkça XP kazanır ve seviye atlarsınız.
+*   **Gizlilik:** Tüm görüntü işleme cihaz üzerinde (on-device) yapılır, hiçbir görüntü sunucuya gönderilmez.
+
+### Teknik Altyapı
+
+*   **Framework:** Flutter & Dart
+*   **Yapay Zeka:** Google ML Kit
+*   **Veritabanı:** Hive (Yerel depolama)
+*   **Durum Yönetimi:** ValueNotifier
+
+### Kurulum
+
+1.  **Projeyi indirin:**
+    ```bash
+    git clone https://github.com/edpuzn/Posturify.git
+    cd Posturify
+    ```
+
+2.  **Paketleri yükleyin:**
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Çalıştırın:**
+    ```bash
+    flutter run --release
+    ```
