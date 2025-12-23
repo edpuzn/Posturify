@@ -11,11 +11,46 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await initializeDateFormatting('tr_TR', null);
-  await UserService().init();
-  await NotificationService().init();
-  runApp(const FitnessApp());
+  try {
+    WidgetsFlutterBinding.ensureInitialized();
+    await initializeDateFormatting('tr_TR', null);
+    await UserService().init();
+    await NotificationService().init();
+    runApp(const FitnessApp());
+  } catch (e, stack) {
+    print('STARTUP ERROR: $e');
+    print(stack);
+    runApp(MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.error_outline, color: Colors.red, size: 48),
+                  const SizedBox(height: 16),
+                  const Text("Başlatma Hatası", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  Text(e.toString(), textAlign: TextAlign.center),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                     // Retry logic could go here, for now just print
+                     print("Retry pressed");
+                    }, 
+                    child: const Text("Tekrar Dene")
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    ));
+  }
 }
 
 class FitnessApp extends StatelessWidget {
